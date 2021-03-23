@@ -1,0 +1,2 @@
+include ':app', ':day02'
+rootProject.name='3_22'
