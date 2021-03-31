@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="StreamLayout">
+        <attr name="xSpace" format="integer"></attr>
+        <attr name="ySpace" format="integer"></attr>
+    </declare-styleable>
+</resources>

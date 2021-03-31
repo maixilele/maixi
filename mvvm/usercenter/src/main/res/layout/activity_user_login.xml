@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+   >
+    <data class="UserLoginDataBinding">
+        <variable
+            name="reqData"
+            type="com.example.usercenter.mvvmdemo.viewmodel.UserLoginViewModel" />
+    </data>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <EditText
+            android:hint="请输入用户名"
+            android:text="@={reqData.reqUserEntity.username}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></EditText>
+        <EditText
+            android:hint="请输入密码"
+            android:text="@={reqData.reqUserEntity.pwd}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></EditText>
+        <Button
+            android:text="登录"
+            android:onClick="@{()->reqData.loginCmd(reqData.reqUserEntity)}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></Button>
+        <ImageView
+            android:id="@+id/iv_register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+</layout>
